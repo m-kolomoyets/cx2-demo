@@ -1,0 +1,22 @@
+.wrap {
+    position: relative;
+    width: 100vw;
+}
+
+.wrap :global(.marker) {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.aside {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    padding: 12px;
+}

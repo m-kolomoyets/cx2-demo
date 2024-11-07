@@ -1,0 +1,80 @@
+.wrap {
+    position: relative;
+    font-family: "Syne", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition:
+        background-color 0.2s ease,
+        opacity 0.2s ease;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+}
+
+.wrap:disabled,
+.wrap[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary {
+    padding: 0.5625rem;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+}
+
+.primary {
+    background-color: var(--color-dark-100);
+    color: var(--color-white-100);
+}
+
+.primary:not(:disabled):hover {
+    background-color: var(--color-dark-600);
+}
+
+.primary:not(:disabled):active {
+    background-color: var(--color-dark-600);
+}
+
+.wrap[data-state="loading"] {
+    cursor: wait;
+    color: transparent;
+}
+
+.loader-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    width: 2rem;
+    height: 2rem;
+    animation: loader-circle 1s steps(8, end) infinite;
+    color: var(--color-blue-100);
+}
+
+.primary .loader {
+    color: var(--color-white-100);
+}
+
+@media screen and (max-width: 1119px) {
+    .primary,
+    .secondary,
+    .outline {
+        padding: 0.9375rem 1.25rem;
+        font-size: 0.875rem;
+        border-radius: 1rem;
+    }
+}
+
+@keyframes loader-circle {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,7 @@
+/node_modules
+/coverage
+/dist
+/tmp
+/storybook-static
+
+routeTree.gen.ts

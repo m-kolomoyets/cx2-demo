@@ -1,0 +1,10 @@
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.title {
+    color: var(--color-white-100);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
