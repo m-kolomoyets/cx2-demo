@@ -13,7 +13,7 @@ export const useDroneWithArea = () => {
 
     const [isForwards, toggleIsForwards] = useToggle(true);
     const [currentIndex, { inc: incrementCurrentIndex, dec: decrementCurrentIndex }] = useCounter(0);
-    const [followedPath, { push: pushToFollowedPath }] = useList<google.maps.LatLngLiteral>([]);
+    const [followedPath, { push: pushToFollowedPath }] = useList<google.maps.LatLngLiteral>([trajectory[0]]);
 
     const currentPosition = useMemo(() => {
         return trajectory[currentIndex];
