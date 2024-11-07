@@ -24,7 +24,7 @@ const DroneWithArea: React.FC = () => {
                 icons={[
                     {
                         icon: {
-                            path: 'M 0,-0.5 0,0.5',
+                            path: 'M 0,1 0,0.5',
                             strokeOpacity: 1,
                             strokeColor: 'blue',
                             scale: 4,
